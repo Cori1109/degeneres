@@ -40,7 +40,7 @@ var (
 		"IsMap":                 IsMap,
 		"MinusStar":             MinusStar,
 	}
-	degeneresDir = filepath.Join(build.Default.GOPATH, "src", "github.com", "rms1000watt", "degeneres")
+	degeneresDir = filepath.Join(build.Default.GOPATH, "src", "github.com", "Cori1109", "degeneres")
 )
 
 func Generate(cfg Config) {
@@ -119,7 +119,7 @@ func UnmarshalFile(filePath string) (proto Proto, err error) {
 }
 
 func getHelperFileNames() (helperFileNames []string, err error) {
-	helperFiles, err := ioutil.ReadDir(filepath.Join(build.Default.GOPATH, "src", "github.com", "rms1000watt", "degeneres", dirTemplates, dirHelpers))
+	helperFiles, err := ioutil.ReadDir(filepath.Join(build.Default.GOPATH, "src", "github.com", "Cori1109", "degeneres", dirTemplates, dirHelpers))
 	if err != nil {
 		return
 	}
@@ -196,7 +196,7 @@ func genFile(cfg Config, tpl Template, helperFileNames []string) (err error) {
 		return errGenFail
 	}
 
-	templateFileName := filepath.Join(build.Default.GOPATH, "src", "github.com", "rms1000watt", "degeneres", dirTemplates, tpl.FileName)
+	templateFileName := filepath.Join(build.Default.GOPATH, "src", "github.com", "Cori1109", "degeneres", dirTemplates, tpl.FileName)
 	fileBytes, err := ioutil.ReadFile(templateFileName)
 	if err != nil {
 		log.Error("Failed reading template file: ", err)
@@ -211,7 +211,7 @@ func genFile(cfg Config, tpl Template, helperFileNames []string) (err error) {
 
 	fullHelperFileNames := []string{}
 	for _, helperFileName := range helperFileNames {
-		fullHelperFileNames = append(fullHelperFileNames, filepath.Join(build.Default.GOPATH, "src", "github.com", "rms1000watt", "degeneres", dirTemplates, helperFileName))
+		fullHelperFileNames = append(fullHelperFileNames, filepath.Join(build.Default.GOPATH, "src", "github.com", "Cori1109", "degeneres", dirTemplates, helperFileName))
 	}
 
 	if _, err := t.ParseFiles(fullHelperFileNames...); err != nil {

@@ -3,10 +3,10 @@ syntax = "proto3";
 package pb;
 
 option (dg.version) = "v0.1.0";
-option (dg.author) = "Ryan Smith";
+option (dg.author) = "Chris Jenkins";
 option (dg.project_name) = "Test Server";
 option (dg.docker_path) = "docker.io/rms1000watt/test-server";
-option (dg.import_path) = "github.com/rms1000watt/test-server";
+option (dg.import_path) = "github.com/Cori1109/test-server";
 
 service Echo {
     option (dg.middleware.logger) = true;

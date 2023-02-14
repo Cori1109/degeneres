@@ -24,4 +24,4 @@ docker run -itd -p 443:443 {{.DockerPath}}:{{.Version}} [ARGS...]
 ```
 
 
-**Built using [Degeneres](https://www.github.com/rms1000watt/degeneres)**
+**Built using [Degeneres](https://www.github.com/Cori1109/degeneres)**

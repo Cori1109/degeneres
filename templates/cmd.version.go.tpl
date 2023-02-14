@@ -21,5 +21,5 @@ func runVersion(cmd *cobra.Command, args []string) {
     fmt.Println("{{.ProjectName}}: {{.Version}}")
     fmt.Println("Degeneres: {{.GeneratorVersion}}")
     fmt.Println("")
-    fmt.Println("Built with love using: https://github.com/rms1000watt/degeneres")
+    fmt.Println("Built with love using: https://github.com/Cori1109/degeneres")
 }

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/rms1000watt/degeneres/cmd"
+import "github.com/Cori1109/degeneres/cmd"
 
 func main() {
 	cmd.Execute()

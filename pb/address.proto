@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package address;
 
-import "github.com/rms1000watt/degeneres/pb/postal.proto";
+import "github.com/Cori1109/degeneres/pb/postal.proto";
 
 message Address {
     string address_1     = 1;

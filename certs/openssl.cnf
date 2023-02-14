@@ -12,7 +12,7 @@ ST = CA
 L  = Newport Beach
 O  = Super Evil Mega Company
 OU = Backend Engineers
-CN = rms1000watt
+CN = Cori1109
 
 [ v3_ext ]
 keyUsage         = keyEncipherment, dataEncipherment

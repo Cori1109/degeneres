@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/rms1000watt/degeneres/generate/certs"
+	"github.com/Cori1109/degeneres/generate/certs"
 
 	"github.com/spf13/cobra"
 )
