@@ -4,7 +4,7 @@ Degeneres, the boilerplate generator for REST-like servers in Go!
 
 ### Example
 
-An example server generated with Degeneres can be seen at [http://github.com/rms1000watt/degeneres-test](http://github.com/rms1000watt/degeneres-test)
+An example server generated with Degeneres can be seen at [http://github.com/Cori1109/degeneres-test](http://github.com/Cori1109/degeneres-test)
 
 ### Motivation
 
@@ -19,8 +19,8 @@ While gRPC (leveraging Protobuf) would handle a lot of this functionality, many 
 In one terminal, get and build the project:
 
 ```bash
-go get -u -v github.com/rms1000watt/degeneres
-cd $(go env GOPATH)/src/github.com/rms1000watt/degeneres
+go get -u -v github.com/Cori1109/degeneres
+cd $(go env GOPATH)/src/github.com/Cori1109/degeneres
 go build
 ```
 
@@ -32,10 +32,10 @@ syntax = "proto3";
 package pb;
 
 option (dg.version) = "v0.1.0";
-option (dg.author) = "Ryan Smith";
+option (dg.author) = "Chris Jenkins";
 option (dg.project_name) = "Test Server";
 option (dg.docker_path) = "docker.io/rms1000watt/test-server";
-option (dg.import_path) = "github.com/rms1000watt/test-server";
+option (dg.import_path) = "github.com/Cori1109/test-server";
 
 service Echo {
     rpc Echo(EchoIn) returns (EchoOut) {
@@ -118,7 +118,7 @@ curl -d '{"in":"Hello World"}' http://localhost:8080/echo
 You get an empty JSON response because the logic to go from Input -> Output is up to you. Edit the handler to fill in the Output logic
 
 ```bash
-open $(go env GOPATH)/src/github.com/rms1000watt/test-server/echo/echoHandler.go
+open $(go env GOPATH)/src/github.com/Cori1109/test-server/echo/echoHandler.go
 ```
 
 And add 1 line to echo the response in `EchoHandlerPOST`:
@@ -130,7 +130,7 @@ echoOut.Out = echoIn.In
 Now rebuild and run the server again:
 
 ```bash
-cd $(go env GOPATH)/src/github.com/rms1000watt/test-server
+cd $(go env GOPATH)/src/github.com/Cori1109/test-server
 go build
 ./test-server echo --log-level debug
 ```
@@ -150,7 +150,7 @@ Naturally, you'll want to update your protobuf file and regenerate.
 Go to your project:
 
 ```bash
-cd $(go env GOPATH)/src/github.com/rms1000watt/test-server
+cd $(go env GOPATH)/src/github.com/Cori1109/test-server
 ```
 
 Update your protobuf file `pb/test.proto`:
@@ -161,10 +161,10 @@ syntax = "proto3";
 package pb;
 
 option (dg.version) = "v0.1.0";
-option (dg.author) = "Ryan Smith";
+option (dg.author) = "Chris Jenkins";
 option (dg.project_name) = "Test Server";
 option (dg.docker_path) = "docker.io/rms1000watt/test-server";
-option (dg.import_path) = "github.com/rms1000watt/test-server";
+option (dg.import_path) = "github.com/Cori1109/test-server";
 
 service Echo {
     option (dg.middleware.logger) = true;
@@ -197,7 +197,7 @@ go generate
 Update the handler to go from Input -> Ouput
 
 ```bash
-open $(go env GOPATH)/src/github.com/rms1000watt/test-server/echo/echoHandler.go
+open $(go env GOPATH)/src/github.com/Cori1109/test-server/echo/echoHandler.go
 ```
 
 Rebuild and run
