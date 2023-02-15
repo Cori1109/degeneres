@@ -324,7 +324,7 @@ option (dg.middleware.no_cache) = true;
 - [ ] Generator validation on types to handle duplication infile and across imports
 - [ ] More docs
 - [ ] Docs to show all options
-- [ ] More examples
+- [x] More examples
 - [ ] Generate unit tests for helpers
 - [ ] Generate server tests
 - [ ] Add validator to only accept fields in message
